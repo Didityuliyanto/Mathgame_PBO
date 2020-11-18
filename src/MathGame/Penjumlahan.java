@@ -22,7 +22,7 @@ public class Penjumlahan {
     int level;
     String name;
     
-    //constructor untuk memanggil nama pemain yang tersimpan di class Menu
+    //constructor untuk memanggil nama pemain yang tersimpan di class Star
     public Penjumlahan(String name){
         this.name = name;
     }
