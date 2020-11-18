@@ -32,11 +32,14 @@ public class Start {
         Penjumlahan x = new Penjumlahan(name);
         Pengurangan y = new Pengurangan(name);
         while(true){
-            System.out.println("Pilih Menu: ");
+            System.out.println("**********************");
+            System.out.println("Game Math");
+            System.out.println("**********************");
+            System.out.println("Menu : ");
             System.out.println("1. Penjumlahan");
             System.out.println("2. Pengurangan");
             System.out.println("3. Keluar");
-            System.out.print("Pilih No Menu: ");
+            System.out.print("Pilih No Menu : ");
             //Proses untuk pilih menu
             Scanner sp = new Scanner(System.in);
             pilih = sp.nextInt();
