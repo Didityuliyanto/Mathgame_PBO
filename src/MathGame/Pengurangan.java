@@ -22,7 +22,7 @@ public class Pengurangan {
     int level;
     String name;
     
-    //constructor untuk memanggil nama pemain yang tersimpan di class Menu
+    //constructor untuk memanggil nama pemain yang tersimpan di class Star
     public Pengurangan(String name){
         this.name = name;
     }
