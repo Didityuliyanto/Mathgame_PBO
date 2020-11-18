@@ -22,7 +22,7 @@ public class Pengurangan {
     int level;
     String name;
     
-    //constructor untuk memanggil nama pemain yang tersimpan di class Star
+    //constructor untuk memanggil nama pemain yang tersimpan di class Start
     public Pengurangan(String name){
         this.name = name;
     }
@@ -34,11 +34,11 @@ public class Pengurangan {
         level = 1;
         
         System.out.println("**********************");
-        System.out.println("Game Math - Penjumlahan");
+        System.out.println("Game Math - Pengurangan");
         System.out.println("**********************");
         Scanner p = new Scanner(System.in);
         
-        //method untuk melakukan proses penjumlahan
+        //method untuk melakukan proses pengurangan
         while(true){
             if (level == 1) {
                 bil1 = ThreadLocalRandom.current().nextInt(1, 10);
@@ -64,8 +64,10 @@ public class Pengurangan {
                 }
             }
             else if (level == 2){
-                bil1 = ThreadLocalRandom.current().nextInt(-10, -1);
-                bil2 = ThreadLocalRandom.current().nextInt(-10, -1);
+                do {
+                    bil1 = ThreadLocalRandom.current().nextInt(1, 10);
+                    bil2 = ThreadLocalRandom.current().nextInt(1, 10);
+                } while (bil1 < bil2);
                 hasil = bil1 - bil2;
                 System.out.println("Berapakah hasil dari (" + bil1 + ") - (" + bil2 + ") ?");
                 System.out.print("Jawab = ");
@@ -97,7 +99,7 @@ public class Pengurangan {
                 } else if (bil1 > 0 && bil2 < 0){
                     System.out.println("Berapakah hasil dari " + bil1 + " - (" + bil2 + ") ?");
                 } else {
-                    System.out.println("Berapakah hasil dari " + bil1 + " - " + (bil2) + " ?");
+                    System.out.println("Berapakah hasil dari " + bil1 + " - " + bil2 + " ?");
                 }
                 System.out.print("Jawab = ");
                 jawab = p.nextInt();
@@ -110,7 +112,7 @@ public class Pengurangan {
                     System.out.println("Wah, salah deh [Skor: " + skor + "] [Lives: " + lives + "][Level: " + level + "]");
                 }
                 if (skor >= 300){
-                    System.out.println("Selamat " + name + ", Anda telah menyelesaikan soal pengurangan dengan baik. Silakan dicoba soal pemjumlahan ya");
+                    System.out.println("Selamat " + name + ", Anda telah menyelesaikan soal pengurangan dengan baik. Silakan dicoba soal penjumlahan ya");
                     break;
                 }
                 if (lives == 0){
